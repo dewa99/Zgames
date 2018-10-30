@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-[gd_scene load_steps=21 format=1]
-
-[ext_resource path="res://UI/background_ingame.png" type="Texture" id=1]
-[ext_resource path="res://scripts/controller_level1.gd" type="Script" id=2]
-=======
 [gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://UI/background_ingame.png" type="Texture" id=1]
 [ext_resource path="res://scripts/c_switch_image.gd" type="Script" id=2]
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 [ext_resource path="res://scripts/level_control.gd" type="Script" id=3]
 [ext_resource path="res://UI/back_button.png" type="Texture" id=4]
 [ext_resource path="res://UI/upcll.ttf" type="DynamicFontData" id=5]
@@ -19,10 +12,6 @@
 [ext_resource path="res://UI/button.png" type="Texture" id=10]
 [ext_resource path="res://UI/button_hover.png" type="Texture" id=11]
 [ext_resource path="res://scripts/level_select.gd" type="Script" id=12]
-<<<<<<< HEAD
-[ext_resource path="res://scripts/retry.gd" type="Script" id=13]
-=======
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -41,11 +30,7 @@ tracks/0/path = NodePath(".:rect/size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-<<<<<<< HEAD
-"times": FloatArray( 0, 0.2 ),
-=======
 "times": FloatArray( 0, 0.3 ),
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 131, 126 ), Vector2( 131, 0 ) ]
@@ -61,7 +46,7 @@ tracks/0/path = NodePath(".:rect/size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2 ),
+"times": FloatArray( 0, 0.3 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 131, 0 ), Vector2( 131, 128 ) ]
@@ -119,17 +104,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-<<<<<<< HEAD
-margin/left = 410.0
-margin/top = 160.0
-margin/right = 541.0
-margin/bottom = 286.0
-=======
 margin/left = 430.0
 margin/top = 166.0
 margin/right = 561.0
 margin/bottom = 292.0
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -179,17 +157,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-<<<<<<< HEAD
-margin/left = 560.0
-margin/top = 160.0
-margin/right = 691.0
-margin/bottom = 286.0
-=======
 margin/left = 575.0
 margin/top = 165.0
 margin/right = 706.0
 margin/bottom = 291.0
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -237,17 +208,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-<<<<<<< HEAD
-margin/left = 560.0
-margin/top = 310.0
-margin/right = 691.0
-margin/bottom = 436.0
-=======
 margin/left = 573.0
 margin/top = 308.0
 margin/right = 704.0
 margin/bottom = 434.0
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -312,17 +276,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-<<<<<<< HEAD
-margin/left = 410.0
-margin/top = 310.0
-margin/right = 541.0
-margin/bottom = 435.0
-=======
 margin/left = 428.0
 margin/top = 307.0
 margin/right = 559.0
 margin/bottom = 432.0
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -369,25 +326,15 @@ max_lines_visible = -1
 
 [node name="kotak5" type="TextureButton" parent="."]
 
-<<<<<<< HEAD
-=======
 editor/display_folded = true
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-<<<<<<< HEAD
-margin/left = 710.0
-margin/top = 160.0
-margin/right = 841.0
-margin/bottom = 286.0
-=======
 margin/left = 720.0
 margin/top = 165.0
 margin/right = 851.0
 margin/bottom = 291.0
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -430,25 +377,15 @@ max_lines_visible = -1
 
 [node name="kotak6" type="TextureButton" parent="."]
 
-<<<<<<< HEAD
-=======
 editor/display_folded = true
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-<<<<<<< HEAD
-margin/left = 710.0
-margin/top = 310.0
-margin/right = 841.0
-margin/bottom = 436.0
-=======
 margin/left = 719.0
 margin/top = 308.0
 margin/right = 850.0
 margin/bottom = 434.0
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -615,28 +552,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-<<<<<<< HEAD
-[node name="TIME1" type="Label" parent="UI/Level_done"]
-
-rect/scale = Vector2( 0.8, 0.8 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = -207.0
-margin/top = -8.0
-margin/right = 328.0
-margin/bottom = 199.0
-custom_fonts/font = SubResource( 5 )
-text = "Horray!!! You Did It!"
-align = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-=======
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 [node name="TIME_LEFT" type="Label" parent="UI/Level_done"]
 
 focus/ignore_mouse = true
@@ -702,124 +617,6 @@ text = "LEVEL SELECT"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-<<<<<<< HEAD
-
-[node name="Level_Game_over" type="Sprite" parent="UI"]
-
-process/pause_mode = 2
-visibility/visible = false
-transform/pos = Vector2( 638.294, 305.664 )
-transform/scale = Vector2( 0.548457, 0.519574 )
-texture = ExtResource( 9 )
-
-[node name="TIME" type="Label" parent="UI/Level_Game_over"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = -58.0
-margin/top = -282.0
-margin/right = 69.0
-margin/bottom = -196.0
-custom_fonts/font = SubResource( 5 )
-text = "TIME"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="GameOver" type="Label" parent="UI/Level_Game_over"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = -166.0
-margin/top = -118.0
-margin/right = 159.0
-margin/bottom = 146.0
-custom_fonts/font = SubResource( 5 )
-text = "TIME'S UP
-GAME OVER
-"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Level_select" type="TextureButton" parent="UI/Level_Game_over"]
-
-process/pause_mode = 2
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -79.0
-margin/top = 179.0
-margin/right = 77.0
-margin/bottom = 235.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-params/resize_mode = 1
-params/stretch_mode = 0
-script/script = ExtResource( 12 )
-
-[node name="Label" type="Label" parent="UI/Level_Game_over/Level_select"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 15.0
-margin/top = 13.0
-margin/right = 144.0
-margin/bottom = 42.0
-custom_fonts/font = SubResource( 7 )
-text = "LEVEL SELECT"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="RETRY" type="TextureButton" parent="UI/Level_Game_over"]
-
-process/pause_mode = 2
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -80.0
-margin/top = 266.0
-margin/right = 76.0
-margin/bottom = 322.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-params/resize_mode = 1
-params/stretch_mode = 0
-script/script = ExtResource( 13 )
-
-[node name="RETRY" type="Label" parent="UI/Level_Game_over/RETRY"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 47.0
-margin/top = 14.0
-margin/right = 105.0
-margin/bottom = 43.0
-custom_fonts/font = SubResource( 7 )
-text = "RETRY"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-=======
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 
 [connection signal="pressed" from="kotak1" to="c_jawaban" method="_on_kotak1_pressed"]
 
@@ -837,23 +634,11 @@ max_lines_visible = -1
 
 [connection signal="timeout" from="turn_off" to="c_jawaban" method="_on_turn_off_timeout"]
 
-<<<<<<< HEAD
-[connection signal="timeout" from="Level_timer" to="level_control" method="_on_Level_timer_timeout"]
-
-=======
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 [connection signal="pressed" from="UI/home" to="UI/home" method="_on_home_pressed"]
 
 [connection signal="pressed" from="UI/Level_done/home" to="UI/Level_done/home" method="_on_home_pressed"]
 
 [connection signal="pressed" from="UI/Level_done/Level_select" to="UI/Level_done/Level_select" method="_on_Level_select_pressed"]
 
-<<<<<<< HEAD
-[connection signal="pressed" from="UI/Level_Game_over/Level_select" to="UI/Level_Game_over/Level_select" method="_on_Level_select_pressed"]
-
-[connection signal="pressed" from="UI/Level_Game_over/RETRY" to="UI/Level_Game_over/RETRY" method="_on_RETRY_pressed"]
-
-=======
->>>>>>> 8ee581f640cdee1a439030aa2deeeb26bf6f02c8
 
 [editable path="UI/Level_done/home"]
