@@ -1,0 +1,644 @@
+[gd_scene load_steps=20 format=1]
+
+[ext_resource path="res://UI/background_ingame.png" type="Texture" id=1]
+[ext_resource path="res://scripts/c_switch_image.gd" type="Script" id=2]
+[ext_resource path="res://scripts/level_control.gd" type="Script" id=3]
+[ext_resource path="res://UI/back_button.png" type="Texture" id=4]
+[ext_resource path="res://UI/upcll.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://destroy.tres" type="Animation" id=6]
+[ext_resource path="res://idle.tres" type="Animation" id=7]
+[ext_resource path="res://home_button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/Level_done.png" type="Texture" id=9]
+[ext_resource path="res://UI/button.png" type="Texture" id=10]
+[ext_resource path="res://UI/button_hover.png" type="Texture" id=11]
+[ext_resource path="res://scripts/level_select.gd" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 30
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 5 )
+
+[sub_resource type="Animation" id=2]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/size")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 131, 126 ), Vector2( 131, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/size")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 131, 0 ), Vector2( 131, 128 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+
+font/size = 60
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 5 )
+fallback/0 = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+
+font/size = 90
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+
+font/size = 150
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+
+font/size = 30
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background_ingame" type="Sprite" parent="."]
+
+transform/pos = Vector2( 640.31, 299.359 )
+transform/scale = Vector2( 0.982068, 1.0205 )
+texture = ExtResource( 1 )
+
+[node name="c_jawaban" type="Node2D" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="level_control" type="Node2D" parent="."]
+
+transform/pos = Vector2( 259, 181 )
+script/script = ExtResource( 3 )
+
+[node name="kotak1" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 430.0
+margin/top = 166.0
+margin/right = 561.0
+margin/bottom = 292.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="kotak1"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 11.0
+margin/top = 26.0
+margin/right = 120.0
+margin/bottom = 103.0
+custom_fonts/font = SubResource( 1 )
+text = "Future Value"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak1"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/destroy = ExtResource( 6 )
+anims/idle = ExtResource( 7 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="kotak2" type="TextureButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 575.0
+margin/top = 165.0
+margin/right = 706.0
+margin/bottom = 291.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="Label" type="Label" parent="kotak2"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 9.0
+margin/top = 24.0
+margin/right = 118.0
+margin/bottom = 101.0
+custom_fonts/font = SubResource( 1 )
+text = "Present Value"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak2"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="kotak3" type="TextureButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 573.0
+margin/top = 308.0
+margin/right = 704.0
+margin/bottom = 434.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak3"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/destroy = ExtResource( 6 )
+anims/idle = ExtResource( 7 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Label" type="Label" parent="kotak3"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 9.0
+margin/top = 23.0
+margin/right = 118.0
+margin/bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+text = "PV(1+i)"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="kotak3/Label"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 89.0
+margin/top = 21.0
+margin/right = 97.0
+margin/bottom = 35.0
+text = "n"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="kotak4" type="TextureButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 428.0
+margin/top = 307.0
+margin/right = 559.0
+margin/bottom = 432.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak4"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Label" type="Label" parent="kotak4"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 9.0
+margin/right = 163.0
+margin/bottom = 138.0
+custom_fonts/font = SubResource( 1 )
+text = "Aset
+Lancar / 
+Kewajiban
+Lancar"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="kotak5" type="TextureButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 720.0
+margin/top = 165.0
+margin/right = 851.0
+margin/bottom = 291.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak5"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Label" type="Label" parent="kotak5"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 9.0
+margin/top = 23.0
+margin/right = 118.0
+margin/bottom = 100.0
+custom_fonts/font = SubResource( 1 )
+text = "Rasio Lancar"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="kotak6" type="TextureButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 719.0
+margin/top = 308.0
+margin/right = 850.0
+margin/bottom = 434.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak6"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/destroy = ExtResource( 6 )
+anims/idle = ExtResource( 7 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Label" type="Label" parent="kotak6"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 11.0
+margin/top = 26.0
+margin/right = 120.0
+margin/bottom = 103.0
+custom_fonts/font = SubResource( 1 )
+text = "FV / 
+( i+1 )"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="kotak6/Label"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 46.0
+margin/top = 15.0
+margin/right = 87.0
+margin/bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+text = "n"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label1" type="Label" parent="kotak6/Label"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 77.0
+margin/top = 34.0
+margin/right = 118.0
+margin/bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "n"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="turn_on" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="turn_off" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="Level_timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 16.0
+one_shot = true
+autostart = false
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="time_left" type="Label" parent="UI"]
+
+rect/scale = Vector2( 0.6, 0.6 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 997.0
+margin/top = 58.0
+margin/right = 1183.0
+margin/bottom = 116.0
+custom_fonts/font = SubResource( 4 )
+text = "TIME LEFT"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="time" type="Label" parent="UI"]
+
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1118.0
+margin/top = 13.0
+margin/right = 1172.0
+margin/bottom = 71.0
+custom_fonts/font = SubResource( 4 )
+text = "10"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="home" parent="UI" instance=ExtResource( 8 )]
+
+[node name="Level_done" type="Sprite" parent="UI"]
+
+process/pause_mode = 2
+visibility/visible = false
+transform/pos = Vector2( 638.294, 305.664 )
+transform/scale = Vector2( 0.548457, 0.519574 )
+texture = ExtResource( 9 )
+
+[node name="TIME" type="Label" parent="UI/Level_done"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -58.0
+margin/top = -282.0
+margin/right = 69.0
+margin/bottom = -196.0
+custom_fonts/font = SubResource( 5 )
+text = "TIME"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TIME_LEFT" type="Label" parent="UI/Level_done"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -28.0
+margin/top = -167.0
+margin/right = 106.0
+margin/bottom = -23.0
+custom_fonts/font = SubResource( 6 )
+text = "10"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="home" parent="UI/Level_done" instance=ExtResource( 8 )]
+
+process/pause_mode = 2
+margin/left = -80.0
+margin/top = 263.0
+margin/right = 77.0
+margin/bottom = 317.0
+
+[node name="Label1" parent="UI/Level_done/home"]
+
+margin/left = 53.0
+margin/top = 12.0
+margin/right = 158.0
+margin/bottom = 70.0
+
+[node name="Level_select" type="TextureButton" parent="UI/Level_done"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -78.0
+margin/top = 179.0
+margin/right = 78.0
+margin/bottom = 235.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 10 )
+textures/pressed = ExtResource( 11 )
+params/resize_mode = 1
+params/stretch_mode = 0
+script/script = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="UI/Level_done/Level_select"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 15.0
+margin/top = 13.0
+margin/right = 144.0
+margin/bottom = 42.0
+custom_fonts/font = SubResource( 7 )
+text = "LEVEL SELECT"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="kotak1" to="c_jawaban" method="_on_kotak1_pressed"]
+
+[connection signal="pressed" from="kotak2" to="c_jawaban" method="_on_kotak2_pressed"]
+
+[connection signal="pressed" from="kotak3" to="c_jawaban" method="_on_kotak3_pressed"]
+
+[connection signal="pressed" from="kotak4" to="c_jawaban" method="_on_kotak4_pressed"]
+
+[connection signal="pressed" from="kotak5" to="c_jawaban" method="_on_kotak5_pressed"]
+
+[connection signal="pressed" from="kotak6" to="c_jawaban" method="_on_kotak6_pressed"]
+
+[connection signal="timeout" from="turn_on" to="c_jawaban" method="_on_turn_on_timeout"]
+
+[connection signal="timeout" from="turn_off" to="c_jawaban" method="_on_turn_off_timeout"]
+
+[connection signal="pressed" from="UI/home" to="UI/home" method="_on_home_pressed"]
+
+[connection signal="pressed" from="UI/Level_done/home" to="UI/Level_done/home" method="_on_home_pressed"]
+
+[connection signal="pressed" from="UI/Level_done/Level_select" to="UI/Level_done/Level_select" method="_on_Level_select_pressed"]
+
+
+[editable path="UI/Level_done/home"]
