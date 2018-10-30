@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=1]
 
 [ext_resource path="res://UI/background_ingame.png" type="Texture" id=1]
-[ext_resource path="res://scripts/controller_level1.gd" type="Script" id=2]
+[ext_resource path="res://scripts/contorller_level2.gd" type="Script" id=2]
 [ext_resource path="res://scripts/level_control.gd" type="Script" id=3]
 [ext_resource path="res://UI/back_button.png" type="Texture" id=4]
 [ext_resource path="res://UI/upcll.ttf" type="DynamicFontData" id=5]
@@ -31,7 +31,7 @@ tracks/0/path = NodePath(".:rect/size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2 ),
+"times": FloatArray( 0, 0.3 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 131, 126 ), Vector2( 131, 0 ) ]
@@ -47,7 +47,7 @@ tracks/0/path = NodePath(".:rect/size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2 ),
+"times": FloatArray( 0, 0.3 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 131, 0 ), Vector2( 131, 128 ) ]
@@ -96,7 +96,7 @@ script/script = ExtResource( 2 )
 
 [node name="level_control" type="Node2D" parent="."]
 
-transform/pos = Vector2( 259, 181 )
+transform/pos = Vector2( 362, 172 )
 script/script = ExtResource( 3 )
 
 [node name="kotak1" type="TextureButton" parent="."]
@@ -105,9 +105,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 410.0
+margin/left = 360.0
 margin/top = 160.0
-margin/right = 541.0
+margin/right = 491.0
 margin/bottom = 286.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -119,7 +119,6 @@ params/stretch_mode = 0
 
 [node name="Label" type="Label" parent="kotak1"]
 
-visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -129,7 +128,7 @@ margin/top = 26.0
 margin/right = 120.0
 margin/bottom = 103.0
 custom_fonts/font = SubResource( 1 )
-text = "Future Value"
+text = "Laba per Saham"
 align = 1
 valign = 1
 autowrap = true
@@ -157,9 +156,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 560.0
+margin/left = 510.0
 margin/top = 160.0
-margin/right = 691.0
+margin/right = 641.0
 margin/bottom = 286.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -171,7 +170,6 @@ params/stretch_mode = 0
 
 [node name="Label" type="Label" parent="kotak2"]
 
-visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -181,7 +179,7 @@ margin/top = 24.0
 margin/right = 118.0
 margin/bottom = 101.0
 custom_fonts/font = SubResource( 1 )
-text = "Present Value"
+text = "Arus Kas Bersih"
 align = 1
 valign = 1
 autowrap = true
@@ -203,14 +201,15 @@ autoplay = ""
 
 [node name="kotak3" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 560.0
-margin/top = 310.0
-margin/right = 691.0
-margin/bottom = 436.0
+margin/left = 510.0
+margin/top = 300.0
+margin/right = 641.0
+margin/bottom = 426.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -270,14 +269,15 @@ max_lines_visible = -1
 
 [node name="kotak4" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 410.0
-margin/top = 310.0
-margin/right = 541.0
-margin/bottom = 435.0
+margin/left = 360.0
+margin/top = 300.0
+margin/right = 491.0
+margin/bottom = 425.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -324,13 +324,14 @@ max_lines_visible = -1
 
 [node name="kotak5" type="TextureButton" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 710.0
+margin/left = 660.0
 margin/top = 160.0
-margin/right = 841.0
+margin/right = 791.0
 margin/bottom = 286.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -378,10 +379,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 710.0
-margin/top = 310.0
-margin/right = 841.0
-margin/bottom = 436.0
+margin/left = 660.0
+margin/top = 300.0
+margin/right = 791.0
+margin/bottom = 426.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -406,18 +407,20 @@ autoplay = ""
 
 [node name="Label" type="Label" parent="kotak6"]
 
-visibility/visible = false
+rect/scale = Vector2( 0.8, 0.8 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 11.0
-margin/top = 26.0
-margin/right = 120.0
-margin/bottom = 103.0
+margin/left = 10.0
+margin/top = 10.0
+margin/right = 148.0
+margin/bottom = 148.0
 custom_fonts/font = SubResource( 1 )
-text = "FV / 
-( i+1 )"
+text = "Rasio
+Perputaran
+Aset
+Tetap"
 align = 1
 valign = 1
 autowrap = true
@@ -427,6 +430,7 @@ max_lines_visible = -1
 
 [node name="Label" type="Label" parent="kotak6/Label"]
 
+visibility/visible = false
 rect/scale = Vector2( 0.7, 0.7 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -446,6 +450,194 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="Label1" type="Label" parent="kotak6/Label"]
+
+visibility/visible = false
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 77.0
+margin/top = 34.0
+margin/right = 118.0
+margin/bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "n"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="kotak7" type="TextureButton" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 810.0
+margin/top = 300.0
+margin/right = 941.0
+margin/bottom = 426.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak7"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/destroy = ExtResource( 6 )
+anims/idle = ExtResource( 7 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Label" type="Label" parent="kotak7"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 11.0
+margin/top = 26.0
+margin/right = 120.0
+margin/bottom = 103.0
+custom_fonts/font = SubResource( 1 )
+text = "FV / 
+( i+1 )"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="kotak7/Label"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 46.0
+margin/top = 15.0
+margin/right = 87.0
+margin/bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+text = "n"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label1" type="Label" parent="kotak7/Label"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 77.0
+margin/top = 34.0
+margin/right = 118.0
+margin/bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "n"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="kotak8" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 810.0
+margin/top = 160.0
+margin/right = 941.0
+margin/bottom = 286.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 1
+params/scale = Vector2( 0.2, 0.2 )
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="kotak8"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 2 )
+anims/destroy = ExtResource( 6 )
+anims/idle = ExtResource( 7 )
+anims/open = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="Label" type="Label" parent="kotak8"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 11.0
+margin/top = 26.0
+margin/right = 120.0
+margin/bottom = 103.0
+custom_fonts/font = SubResource( 1 )
+text = "FV / 
+( i+1 )"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label" type="Label" parent="kotak8/Label"]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 46.0
+margin/top = 15.0
+margin/right = 87.0
+margin/bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+text = "n"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label1" type="Label" parent="kotak8/Label"]
 
 rect/scale = Vector2( 0.7, 0.7 )
 focus/ignore_mouse = true
@@ -488,6 +680,8 @@ autostart = false
 
 [node name="UI" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="time_left" type="Label" parent="UI"]
 
 rect/scale = Vector2( 0.6, 0.6 )
@@ -527,6 +721,7 @@ max_lines_visible = -1
 [node name="Level_done" type="Sprite" parent="UI"]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 638.294, 305.664 )
 transform/scale = Vector2( 0.548457, 0.519574 )
@@ -636,6 +831,7 @@ max_lines_visible = -1
 [node name="Level_Game_over" type="Sprite" parent="UI"]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 transform/pos = Vector2( 638.294, 305.664 )
 transform/scale = Vector2( 0.548457, 0.519574 )
@@ -759,6 +955,10 @@ max_lines_visible = -1
 [connection signal="pressed" from="kotak5" to="c_jawaban" method="_on_kotak5_pressed"]
 
 [connection signal="pressed" from="kotak6" to="c_jawaban" method="_on_kotak6_pressed"]
+
+[connection signal="pressed" from="kotak7" to="c_jawaban" method="_on_kotak7_pressed"]
+
+[connection signal="pressed" from="kotak8" to="c_jawaban" method="_on_kotak8_pressed"]
 
 [connection signal="timeout" from="turn_on" to="c_jawaban" method="_on_turn_on_timeout"]
 

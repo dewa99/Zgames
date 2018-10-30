@@ -16,10 +16,10 @@ var level_finish_indicator = 0
 var can_change_tex
 
 func _ready():
-	a.resize(6)
-	anim.resize(6)
-	get_index.resize(6)
-	b.resize(6)
+	a.resize(8)
+	anim.resize(8)
+	get_index.resize(8)
+	b.resize(8)
 	
 	can_change_tex = true
 	
@@ -33,6 +33,8 @@ func _ready():
 	a[3]= get_node("../kotak4")
 	a[4]= get_node("../kotak5")
 	a[5]= get_node("../kotak6")
+	a[6]= get_node("../kotak7")
+	a[7]= get_node("../kotak8")
 	
 	anim[0] = get_node("../kotak1/AnimationPlayer")
 	anim[1] = get_node("../kotak2/AnimationPlayer")
@@ -40,6 +42,8 @@ func _ready():
 	anim[3] = get_node("../kotak4/AnimationPlayer")
 	anim[4] = get_node("../kotak5/AnimationPlayer")
 	anim[5] = get_node("../kotak6/AnimationPlayer")
+	anim[6] = get_node("../kotak7/AnimationPlayer")
+	anim[7] = get_node("../kotak8/AnimationPlayer")
 	
 	b[0] = get_node("../kotak1/Label")
 	b[1] = get_node("../kotak2/Label")
@@ -47,6 +51,8 @@ func _ready():
 	b[3] = get_node("../kotak4/Label")
 	b[4] = get_node("../kotak5/Label")
 	b[5] = get_node("../kotak6/Label")
+	b[6] = get_node("../kotak7/Label")
+	b[7] = get_node("../kotak8/Label")
 	
 	finish_state = get_node("../UI/Level_done")
 	
@@ -54,6 +60,8 @@ func _ready():
 	timer_2 = get_node("../turn_on")
 	
 	finish_state.hide()
+	
+	
 	
 	set_process(true)
 	pass
@@ -105,6 +113,21 @@ func _on_kotak6_pressed():
 		cek_jawaban(qs,as,combo_pressed)
 	pass # replace with function body
 
+func _on_kotak7_pressed():
+	if combo_pressed!=2:
+		qs = 3
+		can_change_tex(5)
+		cek_jawaban(qs,as,combo_pressed)
+	pass # replace with function body
+
+
+func _on_kotak8_pressed():
+	if combo_pressed!=2:
+		as = 3
+		can_change_tex(5)
+		cek_jawaban(qs,as,combo_pressed)
+	pass # replace with function body
+	
 func change_tex(index):
 	if combo_pressed!=2:
 		anim[index].play("close")
@@ -136,14 +159,14 @@ func image_default(index):
 	b[index].hide()
 
 func jawaban_benar():
-	for i in range(0,6,1):
+	for i in range(0,a.size(),1):
 		if get_index[i]==1:
 			get_index[i]=0
 	print(as)
 	print(qs)
 
 func jawaban_salah():
-	for i in range(0,6,1):
+	for i in range(0,a.size(),1):
 		if get_index[i]==1:
 			get_index[i]=0
 	combo_pressed=0
@@ -154,14 +177,14 @@ func level_finished():
 		get_tree().set_pause(true)
 
 func _on_turn_off_timeout():
-	for i in range(0,6,1):
+	for i in range(0,a.size(),1):
 		image_default(i)
 	pass # replace with function body
 
 
 
 func _on_turn_on_timeout():
-	for i in range(0,6,1):
+	for i in range(0,a.size(),1):
 		if get_index[i]==1:
 			a[i].hide()
 	jawaban_benar()
@@ -173,5 +196,7 @@ func can_change_tex(index_texture):
 	change_tex(index_texture)
 	combo_pressed +=1
 	get_index[index_texture]=1
+
+
 
 
