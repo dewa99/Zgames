@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 [gd_scene load_steps=12 format=1]
+=======
+[gd_scene load_steps=7 format=1]
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 
 [ext_resource path="res://UI/background_lobby.png" type="Texture" id=1]
 [ext_resource path="res://UI/Level_2.png" type="Texture" id=2]
 [ext_resource path="res://UI/Level_pressed.png" type="Texture" id=3]
 [ext_resource path="res://UI/upcll.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://UI/Level.png" type="Texture" id=5]
+<<<<<<< HEAD
 [ext_resource path="res://scripts/level1.gd" type="Script" id=6]
 [ext_resource path="res://UI/Level_3.png" type="Texture" id=7]
 [ext_resource path="res://UI/Level_4.png" type="Texture" id=8]
 [ext_resource path="res://UI/Level_5.png" type="Texture" id=9]
 [ext_resource path="res://home_button.tscn" type="PackedScene" id=10]
+=======
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -28,15 +35,25 @@ texture = ExtResource( 1 )
 
 [node name="Level_2" type="TextureButton" parent="."]
 
+<<<<<<< HEAD
 editor/display_folded = true
+=======
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+<<<<<<< HEAD
 margin/left = 679.0
 margin/top = 57.0
 margin/right = 863.4
 margin/bottom = 241.0
+=======
+margin/left = 684.0
+margin/top = 77.0
+margin/right = 868.4
+margin/bottom = 261.0
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -64,15 +81,25 @@ max_lines_visible = -1
 
 [node name="Level_1" type="TextureButton" parent="."]
 
+<<<<<<< HEAD
 editor/display_folded = true
+=======
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+<<<<<<< HEAD
 margin/left = 417.0
 margin/top = 87.0
 margin/right = 601.4
 margin/bottom = 271.0
+=======
+margin/left = 412.0
+margin/top = 82.0
+margin/right = 596.4
+margin/bottom = 266.0
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -81,7 +108,10 @@ textures/pressed = ExtResource( 3 )
 params/resize_mode = 0
 params/scale = Vector2( 0.4, 0.4 )
 params/stretch_mode = 0
+<<<<<<< HEAD
 script/script = ExtResource( 6 )
+=======
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 
 [node name="Label" type="Label" parent="Level_1"]
 
@@ -99,6 +129,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+<<<<<<< HEAD
 [node name="Level_3" type="TextureButton" parent="."]
 
 editor/display_folded = true
@@ -218,4 +249,6 @@ margin/bottom = 565.0
 
 [connection signal="pressed" from="home" to="home" method="_on_home_pressed"]
 
+=======
+>>>>>>> 521f49c72363f92f16872414d05e282da4445097
 
