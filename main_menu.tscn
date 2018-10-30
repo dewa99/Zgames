@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://UI/background_lobby.png" type="Texture" id=1]
 [ext_resource path="res://UI/button.png" type="Texture" id=2]
 [ext_resource path="res://UI/button_hover.png" type="Texture" id=3]
-[ext_resource path="res://UI/upcll.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://UI/title.png" type="Texture" id=5]
+[ext_resource path="res://scripts/play.gd" type="Script" id=4]
+[ext_resource path="res://UI/upcll.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://UI/title.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
 font/size = 30
 font/use_mipmaps = true
 font/use_filter = true
-font/font = ExtResource( 4 )
+font/font = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,6 +41,7 @@ textures/normal = ExtResource( 2 )
 textures/pressed = ExtResource( 3 )
 params/resize_mode = 1
 params/stretch_mode = 0
+script/script = ExtResource( 4 )
 
 [node name="play" type="Label" parent="play"]
 
@@ -63,9 +65,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 554.0
+margin/left = 556.0
 margin/top = 409.0
-margin/right = 691.0
+margin/right = 693.0
 margin/bottom = 462.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -130,6 +132,8 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 632.526, 242.638 )
 transform/scale = Vector2( 0.245585, 0.247736 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
+
+[connection signal="pressed" from="play" to="play" method="_on_play_pressed"]
 
 
